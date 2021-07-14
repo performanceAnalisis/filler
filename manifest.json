@@ -1,0 +1,22 @@
+{
+"name": "Wizard",
+"description" : "wizard",
+"version": "1.0",
+"manifest_version": 2,
+"permissions":[ 
+	"tabs",
+        "storage"],
+"content_scripts":[ {
+    "matches": ["https://lead-ailoshop.ccsystem.net/","https://ailoshop.com/securecheckout/*"],
+    "js": ["popup.js",
+               "content2.js",
+               "content_nomsg.js"]
+    }],
+"browser_action": {
+     
+    "default_popup": "popup.html"
+  }
+   
+     
+}
+
