@@ -23,11 +23,24 @@ console.log("CAP: " + vectorFila[10]);
 var order= vectorFila[0];
 var publisher= vectorFila[1];
 var dataOrder= vectorFila[2];
-var fname= vectorFila[3];
+
+//var fname= vectorFila[3];
+vectorFila[3]= vectorFila[3].replaceAll("+", " ");
+//vectorFila[3]= vectorFila[3].replaceAll("%", " ");
+vectorFila[3]= vectorFila[3].replaceAll("%C3%BA", " ");
+vectorFila[3]= vectorFila[3].replaceAll("%C3%", " ");
+vectorFila[3]= vectorFila[3].replaceAll("%2C", " ");
+var fname= vectorFila[3].split(' ').slice(0, -1).join(' '); // returns "Paul Steve"
+var lname= vectorFila[3].split(' ').slice(-1).join(' '); // returns "Panakkal
 var tel= vectorFila[4];
 var quantity= vectorFila[5];
 var product= vectorFila[6];
 var status= vectorFila[7];
+//vectorFila[8]= vectorFila[8].replaceAll("%", " ");
+vectorFila[8]= vectorFila[8].replaceAll("+", " ");
+vectorFila[8]= vectorFila[8].replaceAll("%C3%BA", " ");
+vectorFila[8]= vectorFila[8].replaceAll("%C3%", " ");
+vectorFila[8]= vectorFila[8].replaceAll("%2C", " ");
 var address= vectorFila[8];
 var city= vectorFila[9];
 var cap= vectorFila[10]; 
@@ -45,6 +58,7 @@ console.log("source page ran");
 
 var storArray = {
     src_fname: fname,
+    src_lname: lname,
     src_tel: tel, 
     src_cap: cap,
     src_addr: address, 

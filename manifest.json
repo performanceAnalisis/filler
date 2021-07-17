@@ -7,7 +7,7 @@
 	"tabs",
         "storage"],
 "content_scripts":[ {
-    "matches": ["https://lead-ailoshop.ccsystem.net/","https://ailoshop.com/securecheckout/*"],
+    "matches": ["https://lead-ailoshop.ccsystem.net/","https://ailoshop.com/securecheckout/*","https://manager.masvoz.es/"],
     "js": ["popup.js",
                "content2.js",
                "content_nomsg.js"]
