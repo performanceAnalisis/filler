@@ -1,6 +1,5 @@
-//var fname = document.getElementById("j_id0:frmApp:frmAppBlock:j_id128:j_id130:0:j_id132:j_id133").value;
-//var lname = document.getElementById("j_id0:frmApp:frmAppBlock:j_id128:j_id130:0:j_id132:j_id134").value;
-
+//Guardo los datos de los leads en storage bajo la etiqueta newStorage
+ 
 if(window.location.href == "https://lead-ailoshop.ccsystem.net/"){
 console.log("Hola estoy funcionando en lado lead");
 try{

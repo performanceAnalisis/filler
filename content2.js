@@ -1,3 +1,6 @@
+//Pego los datos de los leads en el sitio que corresponde
+
+
  console.log("target content2 ran");
 
 var storedLegal = chrome.storage.local.get('newStorage', function (items) {
@@ -30,5 +33,24 @@ para que llame
     }); 
     }
 */
+
+   if(window.location.href == "https://manager.masvoz.es/"){
+   console.log("hola desde masvoz");
+   document.querySelector("#webphone-row > div.controles_.ONLINE > div.inline.agent-call-buttons > div.inline.btn-wp.colgar-btn-wp").click();
+   setTimeout(function(){ document.querySelector("#webphone-row > div.controles_.ONLINE > div:nth-child(3) > input").value = items.newStorage.src_tel;  }, 3000);
+   setTimeout(function(){ document.querySelector("#webphone-row > div.controles_.ONLINE > div.inline.agent-call-buttons > div.inline.btn-wp.llamar-btn-wp").click() ; }, 500);
+
+
+   }
+
+
+
+
+
+
+
+
+
+
 
   });
